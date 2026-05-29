@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FLL Pro Mentorluk · Oğuzhan Köse · 2026–27 Sezonu</title>
+<meta name="description" content="18 yıllık FLL & WRO koçluğu deneyimiyle online mentorluk. Asia Pacific, WPI, Florida, Kore Open Invitational ve WRO International tecrübesi.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --ink:#0f0e0c;
+  --ink2:#3a3830;
+  --ink3:#7a7060;
+  --gold:#b8860b;
+  --gold-light:#e8c84a;
+  --cream:#faf8f3;
+  --cream2:#f0ece0;
+  --border:#ddd8c4;
+}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--ink);font-family:'DM Sans',sans-serif;font-weight:300;line-height:1.7;max-width:860px;margin:0 auto}
+
+nav{display:flex;justify-content:space-between;align-items:center;padding:18px 40px;border-bottom:1px solid var(--border);position:sticky;top:0;background:var(--cream);z-index:100}
+.nav-logo{font-family:'Playfair Display',serif;font-size:16px;font-weight:700;color:var(--ink)}
+.nav-logo span{color:var(--gold)}
+.nav-links{display:flex;gap:24px;list-style:none}
+.nav-links a{font-size:12px;color:var(--ink3);text-decoration:none;letter-spacing:.06em;text-transform:uppercase;transition:color .2s}
+.nav-links a:hover{color:var(--ink)}
+.nav-cta{font-size:12px;background:var(--ink);color:var(--cream);padding:8px 16px;border-radius:3px;text-decoration:none;letter-spacing:.04em;transition:opacity .2s}
+.nav-cta:hover{opacity:.8}
+
+.hero{padding:64px 40px 52px;border-bottom:1px solid var(--border);position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-60px;right:-80px;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,#e8c84a18 0%,transparent 70%);pointer-events:none}
+.eyebrow{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:20px;font-weight:500}
+.hero h1{font-family:'Playfair Display',serif;font-size:42px;font-weight:700;line-height:1.15;color:var(--ink);margin-bottom:12px;max-width:520px}
+.hero h1 em{font-style:italic;color:var(--gold)}
+.hero-sub{font-size:15px;color:var(--ink2);max-width:440px;margin-bottom:32px;line-height:1.7}
+.hero-actions{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.hero-price{display:inline-flex;align-items:baseline;gap:8px;background:var(--ink);color:var(--cream);padding:14px 22px;border-radius:4px}
+.hero-price .amount{font-family:'Playfair Display',serif;font-size:28px;font-weight:700}
+.hero-price .per{font-size:12px;opacity:.7;font-weight:300}
+.hero-badge{font-size:11px;border:1px solid var(--gold);color:var(--gold);padding:6px 14px;border-radius:2px;letter-spacing:.06em}
+
+.tourney-strip{display:flex;gap:0;border-bottom:1px solid var(--border);overflow-x:auto}
+.tourney-item{flex:1;min-width:110px;padding:14px 16px;border-right:1px solid var(--border);text-align:center}
+.tourney-item:last-child{border-right:none}
+.tourney-flag{font-size:20px;margin-bottom:5px}
+.tourney-name{font-size:11px;font-weight:500;color:var(--ink);line-height:1.3}
+.tourney-type{font-size:10px;color:var(--ink3);margin-top:3px;letter-spacing:.04em}
+
+.cred-strip{display:flex;gap:0;border-bottom:1px solid var(--border)}
+.cred-item{flex:1;padding:20px 16px;border-right:1px solid var(--border);text-align:center}
+.cred-item:last-child{border-right:none}
+.cred-num{font-family:'Playfair Display',serif;font-size:28px;font-weight:700;color:var(--ink);line-height:1}
+.cred-label{font-size:10px;color:var(--ink3);letter-spacing:.08em;text-transform:uppercase;margin-top:5px}
+
+.wro-banner{margin:24px 40px 0;padding:14px 20px;border:1px solid var(--border);border-radius:4px;display:flex;align-items:center;gap:14px;background:var(--cream2)}
+.wro-pill{font-size:10px;font-weight:500;background:var(--ink);color:var(--cream);padding:3px 10px;border-radius:2px;white-space:nowrap;letter-spacing:.05em}
+.wro-text{font-size:12px;color:var(--ink2);line-height:1.55}
+
+.section{padding:48px 40px}
+.section-label{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;font-weight:500}
+.section h2{font-family:'Playfair Display',serif;font-size:28px;font-weight:700;margin-bottom:24px;line-height:1.25}
+
+.who-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.who-card{background:var(--cream2);border:1px solid var(--border);border-radius:4px;padding:18px 20px}
+.who-card p{font-size:13px;color:var(--ink2);line-height:1.65}
+.who-card strong{display:block;font-size:13px;font-weight:500;color:var(--ink);margin-bottom:5px}
+
+.features{padding:0 40px 48px}
+.feat-row{display:flex;gap:18px;padding:20px 0;border-top:1px solid var(--border)}
+.feat-row:last-child{border-bottom:1px solid var(--border)}
+.feat-num{font-family:'Playfair Display',serif;font-size:34px;font-weight:700;color:var(--border);line-height:1;flex-shrink:0;width:48px}
+.feat-title{font-size:14px;font-weight:500;color:var(--ink);margin-bottom:5px}
+.feat-desc{font-size:13px;color:var(--ink3);line-height:1.65}
+.feat-tag{display:inline-block;font-size:10px;background:var(--ink);color:var(--cream);padding:2px 8px;border-radius:2px;margin-top:7px;letter-spacing:.05em}
+
+.packages{padding:0 40px 48px}
+.pkg-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.pkg{background:var(--cream2);border:1px solid var(--border);border-radius:4px;padding:20px 18px;position:relative}
+.pkg.featured{background:var(--cream);border-color:var(--gold);border-width:1.5px}
+.pkg-badge{position:absolute;top:-11px;left:50%;transform:translateX(-50%);font-size:10px;padding:2px 12px;border-radius:20px;background:var(--gold);color:var(--ink);white-space:nowrap;font-weight:500}
+.pkg-name{font-size:13px;font-weight:500;color:var(--ink);margin-bottom:2px}
+.pkg-sub{font-size:11px;color:var(--ink3);margin-bottom:14px}
+.pkg-price{font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:var(--ink);margin-bottom:2px}
+.pkg-per{font-size:11px;color:var(--ink3);margin-bottom:14px}
+.feat-li{font-size:11px;color:var(--ink2);padding:4px 0;border-bottom:1px solid var(--border);display:flex;gap:7px;line-height:1.5}
+.feat-li:last-of-type{border-bottom:none}
+.feat-li span{color:var(--gold);flex-shrink:0}
+.pkg-btn{width:100%;margin-top:14px;padding:10px;font-size:12px;font-weight:500;border:1px solid var(--border);background:transparent;border-radius:3px;cursor:pointer;color:var(--ink);letter-spacing:.04em;transition:all .2s;font-family:'DM Sans',sans-serif}
+.pkg-btn:hover{background:var(--ink);color:var(--cream);border-color:var(--ink)}
+.pkg.featured .pkg-btn{background:var(--gold);color:var(--ink);border-color:var(--gold)}
+.pkg.featured .pkg-btn:hover{background:var(--gold-light)}
+
+.timeline-section{padding:0 40px 48px}
+.tl-grid{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--border);border-radius:4px;overflow:hidden}
+.tl-col{padding:18px 16px;border-right:1px solid var(--border)}
+.tl-col:last-child{border-right:none}
+.tl-month{font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--gold);margin-bottom:6px;font-weight:500}
+.tl-title{font-size:13px;font-weight:500;color:var(--ink);margin-bottom:8px}
+.tl-item{font-size:11px;color:var(--ink3);line-height:1.9;padding-left:10px;position:relative}
+.tl-item::before{content:'·';position:absolute;left:0;color:var(--gold)}
+
+.quote-section{margin:0 40px 48px;padding:32px 36px;background:var(--ink);border-radius:4px;position:relative;overflow:hidden}
+.quote-section::before{content:'"';font-family:'Playfair Display',serif;font-size:140px;color:#ffffff06;position:absolute;top:-24px;left:18px;line-height:1}
+.quote-text{font-family:'Playfair Display',serif;font-style:italic;font-size:18px;color:var(--cream);line-height:1.65;margin-bottom:16px;position:relative}
+.quote-attr{font-size:11px;color:#9a9080;letter-spacing:.08em;text-transform:uppercase}
+
+.contact-section{padding:0 40px 64px}
+.cta-box{border:1px solid var(--border);border-radius:4px;padding:32px;text-align:center}
+.cta-box h3{font-family:'Playfair Display',serif;font-size:24px;font-weight:700;margin-bottom:8px}
+.cta-box p{font-size:14px;color:var(--ink3);margin-bottom:24px}
+.spots{font-size:11px;color:var(--gold);margin-bottom:20px;letter-spacing:.06em}
+.contact-grid{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.contact-btn{padding:12px 24px;border-radius:3px;font-size:13px;font-weight:500;text-decoration:none;letter-spacing:.04em;transition:all .2s;font-family:'DM Sans',sans-serif;cursor:pointer;border:none}
+.contact-btn.primary{background:var(--gold);color:var(--ink)}
+.contact-btn.primary:hover{background:var(--gold-light)}
+.contact-btn.secondary{background:transparent;border:1px solid var(--border);color:var(--ink)}
+.contact-btn.secondary:hover{background:var(--cream2)}
+
+footer{padding:20px 40px;border-top:1px solid var(--border);font-size:11px;color:var(--ink3);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+
+@media(max-width:640px){
+  nav{padding:14px 20px}
+  .nav-links{display:none}
+  .hero{padding:40px 20px 36px}
+  .hero h1{font-size:30px}
+  .section,.features,.packages,.timeline-section,.contact-section{padding-left:20px;padding-right:20px}
+  .who-grid,.pkg-grid{grid-template-columns:1fr}
+  .tl-grid{grid-template-columns:1fr 1fr}
+  .quote-section{margin:0 20px 40px}
+  .wro-banner{margin:20px 20px 0}
+  footer{padding:16px 20px}
+  .cred-strip{flex-wrap:wrap}
+  .cred-item{min-width:50%;border-bottom:1px solid var(--border)}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">OK <span>·</span> FLL Coach</div>
+  <ul class="nav-links">
+    <li><a href="#paketler">Paketler</a></li>
+    <li><a href="#icerik">İçerik</a></li>
+    <li><a href="#takvim">Takvim</a></li>
+    <li><a href="#iletisim">İletişim</a></li>
+  </ul>
+  <a href="#iletisim" class="nav-cta">Ön görüşme →</a>
+</nav>
+
+<section class="hero">
+  <div class="eyebrow">FLL Pro Mentorluk · 2026–27 Sezonu</div>
+  <h1>Turnuvaya hazır bir takım —<br><em>başarı tesadüf değildir.</em></h1>
+  <p class="hero-sub">18 yıllık FLL & WRO koçluğu ve Asia Pacific, WPI, Florida, Kore Open Invitational tecrübesiyle takımınıza rehberlik ediyorum — robot kodundan sunum koçluğuna kadar.</p>
+  <div class="hero-actions">
+    <div class="hero-price">
+      <span class="amount">₺10.000</span>
+      <span class="per">/ ay &nbsp;·&nbsp; 6 ay sezon paketi</span>
+    </div>
+    <span class="hero-badge">3 kontenjan kaldı</span>
+  </div>
+</section>
+
+<div class="tourney-strip">
+  <div class="tourney-item">
+    <div class="tourney-flag">🌏</div>
+    <div class="tourney-name">Asia Pacific Championship</div>
+    <div class="tourney-type">FLL · Katılımcı</div>
+  </div>
+  <div class="tourney-item">
+    <div class="tourney-flag">🇺🇸</div>
+    <div class="tourney-name">WPI Invitational</div>
+    <div class="tourney-type">FLL · Massachusetts</div>
+  </div>
+  <div class="tourney-item">
+    <div class="tourney-flag">🇺🇸</div>
+    <div class="tourney-name">Florida Invitational</div>
+    <div class="tourney-type">FLL · Katılımcı</div>
+  </div>
+  <div class="tourney-item">
+    <div class="tourney-flag">🇰🇷</div>
+    <div class="tourney-name">Korea Open Invitational</div>
+    <div class="tourney-type">FLL · Jeonju 2026</div>
+  </div>
+  <div class="tourney-item">
+    <div class="tourney-flag">🌍</div>
+    <div class="tourney-name">WRO International</div>
+    <div class="tourney-type">6 yıl · Çok ülke</div>
+  </div>
+</div>
+
+<div class="cred-strip">
+  <div class="cred-item">
+    <div class="cred-num">18</div>
+    <div class="cred-label">Yıl FLL koçluğu</div>
+  </div>
+  <div class="cred-item">
+    <div class="cred-num">4</div>
+    <div class="cred-label">FLL uluslararası turnuva</div>
+  </div>
+  <div class="cred-item">
+    <div class="cred-num">6</div>
+    <div class="cred-label">Yıl WRO international</div>
+  </div>
+  <div class="cred-item">
+    <div class="cred-num">75270</div>
+    <div class="cred-label">The Flintstones</div>
+  </div>
+</div>
+
+<div class="wro-banner">
+  <span class="wro-pill">WRO Deneyimi</span>
+  <span class="wro-text">FLL'in yanı sıra 6 yıldır WRO RoboMission'da uluslararası düzeyde koçluk yapıyorum. Pybricks, SPIKE Prime ve mat stratejisi konusundaki birikimim her iki platformda da geçerli.</span>
+</div>
+
+<section class="section" id="paketler">
+  <div class="section-label">Bu program kime göre?</div>
+  <h2>Ciddi bir sezon hedefleyen<br>takımlar için tasarlandı.</h2>
+  <div class="who-grid">
+    <div class="who-card">
+      <strong>Turnuvada üst sıraları hedefleyenler</strong>
+      <p>Bölgesel turnuvayı geçip ulusal veya uluslararası sahneye çıkmak isteyen takımlar.</p>
+    </div>
+    <div class="who-card">
+      <strong>Pybricks / Python ile mücadele edenler</strong>
+      <p>Robot görevlerinde kod sorunuyla zaman kaybeden, verimli bir yapı kurmak isteyen koçlar.</p>
+    </div>
+    <div class="who-card">
+      <strong>Innovation Project'te kaybolmuş takımlar</strong>
+      <p>Konu seçiminden sunuma kadar jüriyi ikna edecek bir proje çıkarmak isteyenler.</p>
+    </div>
+    <div class="who-card">
+      <strong>İlk kez uluslararası turnuvaya girecekler</strong>
+      <p>Asia Pacific, WPI veya Kore gibi büyük sahnelere hazırlanmak için deneyimli bir rehber arayanlar.</p>
+    </div>
+  </div>
+</section>
+
+<div class="packages">
+  <div class="section-label">Paketler</div>
+  <div class="pkg-grid">
+    <div class="pkg">
+      <div class="pkg-name">Starter</div>
+      <div class="pkg-sub">FLL'e yeni başlayan takımlar</div>
+      <div class="pkg-price">₺6.000</div>
+      <div class="pkg-per">/ ay · 6 ay taahhüt</div>
+      <div class="feat-li"><span>✓</span>Ayda 2 online seans (90 dk)</div>
+      <div class="feat-li"><span>✓</span>Robot görevi kod inceleme</div>
+      <div class="feat-li"><span>✓</span>Proje konusu rehberliği</div>
+      <div class="feat-li"><span>✓</span>WhatsApp destek (haftada 3 soru)</div>
+      <button class="pkg-btn" onclick="document.getElementById('iletisim').scrollIntoView({behavior:'smooth'})">Bilgi al →</button>
+    </div>
+    <div class="pkg featured">
+      <div class="pkg-badge">En çok tercih</div>
+      <div class="pkg-name">Pro</div>
+      <div class="pkg-sub">Turnuvaya ciddi hazırlanan takımlar</div>
+      <div class="pkg-price">₺10.000</div>
+      <div class="pkg-per">/ ay · 6 ay taahhüt</div>
+      <div class="feat-li"><span>✓</span>Ayda 4 online seans (90 dk)</div>
+      <div class="feat-li"><span>✓</span>Pybricks kod yazma & debug</div>
+      <div class="feat-li"><span>✓</span>Innovation Project koçluğu</div>
+      <div class="feat-li"><span>✓</span>Sınırsız WhatsApp desteği</div>
+      <div class="feat-li"><span>✓</span>2 mock turnuva simülasyonu</div>
+      <button class="pkg-btn" onclick="document.getElementById('iletisim').scrollIntoView({behavior:'smooth'})">Ön görüşme talep et →</button>
+    </div>
+    <div class="pkg">
+      <div class="pkg-name">Elite</div>
+      <div class="pkg-sub">Uluslararası sahneye hazırlananlar</div>
+      <div class="pkg-price">₺18.000</div>
+      <div class="pkg-per">/ ay · sezon boyu</div>
+      <div class="feat-li"><span>✓</span>Haftada 2 seans (sınırsız)</div>
+      <div class="feat-li"><span>✓</span>Tam kod geliştirme ortaklığı</div>
+      <div class="feat-li"><span>✓</span>Turnuva günü online destek</div>
+      <div class="feat-li"><span>✓</span>Ebeveyn & okul raporlaması</div>
+      <div class="feat-li"><span>✓</span>Uluslararası turnuva hazırlığı</div>
+      <button class="pkg-btn" onclick="document.getElementById('iletisim').scrollIntoView({behavior:'smooth'})">Teklif al →</button>
+    </div>
+  </div>
+</div>
+
+<div class="features" id="icerik">
+  <div class="section-label">Pro paket detayı</div>
+  <div class="feat-row">
+    <div class="feat-num">01</div>
+    <div>
+      <div class="feat-title">Ayda 4 online seans — 90 dakika</div>
+      <div class="feat-desc">Her seans takımın o haftaki önceliğine göre şekillenir: robot görevi stratejisi, kod geliştirme, proje sunumu veya jüri hazırlığı.</div>
+      <span class="feat-tag">Haftada 1 seans</span>
+    </div>
+  </div>
+  <div class="feat-row">
+    <div class="feat-num">02</div>
+    <div>
+      <div class="feat-title">Pybricks kod yazma & debug desteği</div>
+      <div class="feat-desc">Görev bazlı strateji, sensör kalibrasyonu, çoklu görev mimarisi. Seans dışında da kod paylaşabilirsiniz.</div>
+      <span class="feat-tag">Async kod review</span>
+    </div>
+  </div>
+  <div class="feat-row">
+    <div class="feat-num">03</div>
+    <div>
+      <div class="feat-title">Innovation Project koçluğu</div>
+      <div class="feat-desc">Konu seçiminden uzman görüşmesine, araştırma planından sunum yapısına kadar jüriyi ikna eden bir proje çıkarmanıza yardımcı oluyorum.</div>
+    </div>
+  </div>
+  <div class="feat-row">
+    <div class="feat-num">04</div>
+    <div>
+      <div class="feat-title">Sınırsız WhatsApp desteği</div>
+      <div class="feat-desc">Turnuva öncesi panik anlarında, seanslar arasında aklınıza takılan sorularda. 24 saat içinde yanıt garantisi.</div>
+      <span class="feat-tag">Sezon boyunca</span>
+    </div>
+  </div>
+  <div class="feat-row">
+    <div class="feat-num">05</div>
+    <div>
+      <div class="feat-title">2 mock turnuva simülasyonu</div>
+      <div class="feat-desc">Asia Pacific ve WPI'dan edindiğim jüri perspektifiyle gerçek turnuva ortamını taklit eden simülasyon. Zayıf noktaları önceden tespit ediyoruz.</div>
+      <span class="feat-tag">Kasım & Ocak</span>
+    </div>
+  </div>
+</div>
+
+<div class="timeline-section" id="takvim">
+  <div class="section-label">Sezon takvimi</div>
+  <div class="tl-grid">
+    <div class="tl-col">
+      <div class="tl-month">Eylül – Ekim</div>
+      <div class="tl-title">Strateji & kurulum</div>
+      <div class="tl-item">Tema analizi</div>
+      <div class="tl-item">Görev haritası</div>
+      <div class="tl-item">Pybricks altyapı</div>
+      <div class="tl-item">Proje konusu seçimi</div>
+    </div>
+    <div class="tl-col">
+      <div class="tl-month">Kasım</div>
+      <div class="tl-title">Geliştirme & 1. mock</div>
+      <div class="tl-item">Kod optimizasyonu</div>
+      <div class="tl-item">Proje araştırma</div>
+      <div class="tl-item">1. mock turnuva</div>
+      <div class="tl-item">Geri bildirim & revizyon</div>
+    </div>
+    <div class="tl-col">
+      <div class="tl-month">Aralık – Ocak</div>
+      <div class="tl-title">Turnuva hazırlığı</div>
+      <div class="tl-item">Sunum koçluğu</div>
+      <div class="tl-item">Robot ince ayar</div>
+      <div class="tl-item">2. mock turnuva</div>
+      <div class="tl-item">Stres & zaman yönetimi</div>
+    </div>
+    <div class="tl-col">
+      <div class="tl-month">Şubat</div>
+      <div class="tl-title">Turnuva & sonrası</div>
+      <div class="tl-item">Turnuva günü desteği</div>
+      <div class="tl-item">Debrief & analiz</div>
+      <div class="tl-item">Sonraki sezon planı</div>
+    </div>
+  </div>
+</div>
+
+<div class="quote-section">
+  <div class="quote-text">Robotik yarışmalarında fark yaratan şey teknik bilgi değil, o bilgiyi doğru anda doğru şekilde kullanmayı bilen bir rehberdir.</div>
+  <div class="quote-attr">Oğuzhan Köse &nbsp;·&nbsp; FLL & WRO Koç, 18 yıl &nbsp;·&nbsp; Asia Pacific · WPI · Florida · Korea Open · WRO International</div>
+</div>
+
+<section class="contact-section" id="iletisim">
+  <div class="cta-box">
+    <div class="eyebrow" style="margin-bottom:12px">İletişim</div>
+    <h3>Sezon başlamadan yerinizi alın.</h3>
+    <p>Eylül 2026 başlangıcı için sadece 3 takım alıyorum.<br>Ön görüşme ücretsiz ve bağlayıcı değildir.</p>
+    <div class="spots">● 3 kontenjandan 3'ü hâlâ açık</div>
+    <div class="contact-grid">
+      <a href="mailto:oguzhan@example.com" class="contact-btn primary">E-posta gönder →</a>
+      <a href="https://wa.me/90XXXXXXXXXX" class="contact-btn secondary">WhatsApp →</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>© 2026 Oğuzhan Köse · FLL & WRO Koçluk</span>
+  <span>FLL Team 75270 "The Flintstones" · LEUKAI · Özel Çakabey Okulları, İzmir</span>
+</footer>
+
+</body>
+</html>
